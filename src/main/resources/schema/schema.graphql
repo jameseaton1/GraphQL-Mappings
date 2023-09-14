@@ -1,0 +1,13 @@
+type Market @key(fields: "id") @extends {
+    id: ID @external
+    marketTeamMappings: [MarketTeamMapping]
+}
+
+type MarketTeamMapping {
+    id: ID
+    marketId: Int
+    teamId: Int
+}
+
+
+
